@@ -5,22 +5,22 @@
 
 using namespace std;
 
-unsigned long long int     recurtion_fact(int n)
+unsigned long long int     recurent_fact(int n)
 {
     if (n == 0)
         return 1;
     if (n == 1)
         return 1;
-    return n * recurtion_fact(n - 1);
+    return n * recurent_fact(n - 1);
 }
 
 unsigned long long int      bin(int k, int n)
 {
     int i, result;
-    int factN = recurtion_fact(n);
-    int factK = recurtion_fact(k);
+    int factN = recurent_fact(n);
+    int factK = recurent_fact(k);
 
-    result = factN / (factK * recurtion_fact(n - k));
+    result = factN / (factK * recurent_fact(n - k));
     return result;
 }
 
