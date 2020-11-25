@@ -5,24 +5,27 @@
 
 using namespace std;
 
-int     iteration_fatc(long int n)
+unsigned long long int     iteration_fatc(long int n)
 {
     int fact = 1, i;
 
-    for (i = 1; i <= n; i++)
+    if(n % 2 == 0)
     {
-        if (n < 0)
-        {
-            return 0;
-        }
-        if (i % 2)
-        {
-            fact *= i;
-        }
+       for(int i = 2; i <= n; i += 2)
+       {
+           fact *= i;
+       }
+    }
+    else
+    {
+        for(int i = 1; i <= n; i += 2)
+       {
+           fact *= i;
+       }
     }
     return fact;
 }
-int     recurtion_fact(long int n)
+unsigned long long int     recurtion_fact(long int n)
 {
     if (n == 1)
         return 1;
