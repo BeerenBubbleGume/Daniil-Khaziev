@@ -64,7 +64,7 @@ void ComplexNum::print (){
         cout << comp.real << comp.imag << "i\n";
     } 
 }
-ComplexNum ComplexNum::Read(){
+/*ComplexNum ComplexNum::Read(){
     double x,y;
     cout<<"Действительная часть: ";
     cin>>x;
@@ -72,7 +72,7 @@ ComplexNum ComplexNum::Read(){
     cin>>y;
     ComplexNum A = ComplexNum(x,y);
     return A;
-}
+}*/
 int main(){
     ComplexNum oper1(2.0, 4.0), oper2(3.0, 6.0), result;
     result = oper1 + oper2;
@@ -82,6 +82,7 @@ int main(){
     result = oper1 * oper2;
     result.print();
     result = oper1 / oper2;
+    result.print();
 
     return 0;
 }
